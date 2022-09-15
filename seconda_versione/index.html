@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>php-dischi</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <header>
+        <img class="logo" src="https://cantabrialabsdifacooper.it/wp-content/uploads/2021/03/png-clipart-spotify-logo-spotify-computer-icons-podcast-music-apps-miscellaneous-angle-1-e1614848134495.png" alt="logo">
+    </header>
 
     <div id="app">
         <ul>
             <li v-for="disc in discList">
-                {{disc.title}}
-                {{disc.author}}
-                {{disc.year}}
-                {{disc.genre}}
-                {{disc.poster}}
+
+                <div class="card">
+                    <img :src="disc.poster" :alt="disc.title">
+                    <h1>{{disc.title}}</h1>
+                    <h2>{{disc.author}}</h2>
+                    <p>{{disc.year}}</p>
+                </div>
             </li>
         </ul>
     </div>

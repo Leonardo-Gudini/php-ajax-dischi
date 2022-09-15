@@ -6,7 +6,7 @@ var app = new Vue({
     created() {
 
 
-        for (let i=0; i<=5; i++){
+        for (let i=0; i<6; i++){
             axios.get("http://localhost:8888/php-ajax-dischi/seconda_versione/database.php")
             .then(disc => {
                 this.discList.push(disc.data[i])
